@@ -18,6 +18,11 @@ def DrawCircle(r, dx, dy):
         lcd.dot(dx - x, dy + y)
         lcd.dot(dx - x, dy - y)
 
+        lcd.dot(dx + y, dy + x)
+        lcd.dot(dx - y, dy + x)
+        lcd.dot(dx + y, dy - x)
+        lcd.dot(dx - y, dy - x)
+
 lcd.set_pen(lcd.rgb(255, 0, 0), lcd.rgb(64, 64, 128))
 lcd.erase()
-DrawCircle()
+DrawCircle(10, 20, 20)
